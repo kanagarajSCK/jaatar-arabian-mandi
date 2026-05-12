@@ -23,6 +23,19 @@ html {
     scroll-behavior: smooth;
 }
 
+#home,
+#features,
+#menu,
+#mandi-menu,
+#biryani-menu,
+#starters-menu,
+#desserts-menu,
+#heritage,
+#reviews,
+#contact {
+    scroll-margin-top: 7.5rem;
+}
+
 body {
     margin: 0;
     font-family: "Cormorant Garamond", serif;
@@ -81,20 +94,86 @@ input {
 .site-nav {
     display: flex;
     gap: 2.4rem;
+    align-items: center;
     font-family: "Cinzel", serif;
     text-transform: uppercase;
     font-size: 0.95rem;
     letter-spacing: 0.12em;
 }
 
-.site-nav a {
+.site-nav a,
+.nav-link {
     color: #e9d8bd;
     transition: color 0.2s ease;
 }
 
 .site-nav a:hover,
-.site-nav a:focus-visible {
+.site-nav a:focus-visible,
+.nav-link:hover,
+.nav-link:focus-visible {
     color: var(--gold);
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+}
+
+.nav-arrow {
+    font-size: 0.7rem;
+    transition: transform 0.2s ease;
+}
+
+.nav-dropdown.open .nav-arrow,
+.nav-dropdown-toggle[aria-expanded="true"] .nav-arrow {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 1rem);
+    left: 50%;
+    min-width: 18rem;
+    display: grid;
+    gap: 0.35rem;
+    padding: 0.8rem;
+    background: rgba(19, 7, 7, 0.97);
+    border: 1px solid rgba(240, 196, 61, 0.18);
+    border-radius: 1rem;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.nav-dropdown.open .nav-dropdown-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown-menu a {
+    display: block;
+    padding: 0.8rem 1rem;
+    border-radius: 0.75rem;
+}
+
+.nav-dropdown-menu a:hover,
+.nav-dropdown-menu a:focus-visible {
+    background: rgba(240, 196, 61, 0.08);
 }
 
 .cart-button,
@@ -240,13 +319,19 @@ input {
 
 .hero h1 {
     font-size: clamp(3.8rem, 10vw, 7.4rem);
+    color: #f6e7b5;
+    font-family: "Playfair Display SC", serif;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 .hero h1 span,
 .section-heading span,
 .highlight-content span,
 .cta-content span {
-    color: var(--gold);
+    color: #f6e7b5;
 }
 
 .hero-copy,
@@ -333,6 +418,7 @@ input {
 .dish-track span::before {
     content: "✦";
     margin-right: 1rem;
+    
 }
 
 @keyframes marquee {
@@ -404,6 +490,44 @@ input {
     gap: 2rem;
 }
 
+.menu-overview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 auto 3rem;
+}
+
+.menu-overview a {
+    padding: 0.9rem 1.3rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--gold);
+    font-family: "Cinzel", serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.menu-category + .menu-category {
+    margin-top: 4.5rem;
+}
+
+.menu-category-header {
+    margin-bottom: 2rem;
+}
+
+.menu-category-header h3 {
+    margin: 0;
+    font-family: "Cinzel", serif;
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    font-weight: 600;
+}
+
+.menu-category-header span {
+    color: var(--gold);
+}
+
 .product-card,
 .review-card {
     background: linear-gradient(180deg, rgba(37, 10, 18, 0.9), rgba(26, 8, 12, 0.98));
@@ -417,6 +541,42 @@ input {
     aspect-ratio: 4 / 3;
     background-position: center;
     background-size: cover;
+}
+
+.product-image-gold {
+    background:
+        linear-gradient(135deg, rgba(240, 196, 61, 0.85), rgba(132, 54, 18, 0.78)),
+        radial-gradient(circle at top left, rgba(255, 241, 196, 0.4), transparent 34%);
+}
+
+.product-image-burgundy {
+    background:
+        linear-gradient(135deg, rgba(123, 12, 25, 0.92), rgba(54, 8, 14, 0.94)),
+        radial-gradient(circle at center, rgba(255, 197, 156, 0.12), transparent 38%);
+}
+
+.product-image-copper {
+    background:
+        linear-gradient(135deg, rgba(181, 90, 35, 0.9), rgba(73, 28, 12, 0.94)),
+        radial-gradient(circle at top, rgba(255, 231, 182, 0.18), transparent 35%);
+}
+
+.product-image-plum {
+    background:
+        linear-gradient(135deg, rgba(97, 25, 42, 0.92), rgba(35, 10, 18, 0.94)),
+        radial-gradient(circle at right, rgba(255, 210, 180, 0.14), transparent 34%);
+}
+
+.product-image-forest {
+    background:
+        linear-gradient(135deg, rgba(74, 94, 38, 0.88), rgba(29, 35, 14, 0.95)),
+        radial-gradient(circle at top, rgba(230, 210, 154, 0.14), transparent 34%);
+}
+
+.product-image-smoke {
+    background:
+        linear-gradient(135deg, rgba(95, 71, 55, 0.92), rgba(26, 18, 15, 0.96)),
+        radial-gradient(circle at left, rgba(255, 226, 176, 0.1), transparent 32%);
 }
 
 .product-image::after,
@@ -809,9 +969,35 @@ body.drawer-open {
         border-radius: 0.8rem;
     }
 
+    .nav-link {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0.9rem 1rem;
+        border-radius: 0.8rem;
+    }
+
     .site-nav a:hover,
-    .site-nav a:focus-visible {
+    .site-nav a:focus-visible,
+    .nav-link:hover,
+    .nav-link:focus-visible {
         background: rgba(240, 196, 61, 0.08);
+    }
+
+    .nav-dropdown-menu {
+        position: static;
+        min-width: 0;
+        margin-top: 0.35rem;
+        transform: none;
+        opacity: 1;
+        pointer-events: auto;
+        display: none;
+        border-radius: 0.85rem;
+        box-shadow: none;
+    }
+
+    .nav-dropdown.open .nav-dropdown-menu {
+        display: grid;
+        transform: none;
     }
 
     .cart-button {

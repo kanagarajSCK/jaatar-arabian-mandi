@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jaatar Arabian Mandi</title>
+    <title>zaatar Arabian Mandi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
     <div class="page-shell">
         <header class="site-header">
             <a href="#home" class="brand">
-                <span class="brand-main">Jaatar arabian mandi</span>
+                <span class="brand-main">zaatar arabian mandi</span>
             </a>
 
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">
@@ -26,10 +26,21 @@
 
             <nav class="site-nav" id="siteNav">
                 <a href="#home">Home</a>
-                <a href="#menu">Menu</a>
+                <div class="nav-item nav-dropdown">
+                    <button class="nav-link nav-dropdown-toggle" id="menuDropdownToggle" aria-expanded="false" aria-controls="menuDropdownMenu">
+                        <span>Menu</span>
+                        <span class="nav-arrow">&#9662;</span>
+                    </button>
+                    <div class="nav-dropdown-menu" id="menuDropdownMenu">
+                        <a href="#mandi-menu">Mandi</a>
+                        <a href="#biryani-menu">Biryani</a>
+                        <a href="#starters-menu">Starters</a>
+                        <a href="#desserts-menu">Desserts</a>
+                    </div>
+                </div>
                 <a href="#heritage">Our Heritage</a>
                 <a href="#reviews">Reviews</a>
-                <a href="#contact">Cantact</a>
+                <a href="#contact">Contact</a>
             </nav>
 
             <button class="cart-button" id="cartButton" aria-label="Open cart">
@@ -43,7 +54,7 @@
             <section class="hero" id="home">
                 <div class="hero-overlay"></div>
                 <div class="hero-content">
-                    <h1>JAATAR <span>Arabian Mandi</span></h1>
+                    <h1>zAATAR <span>Arabian Mandi</span></h1>
                     <p class="hero-copy">Where ancient flames meet royal spice, the soul of Yemen in every grain.</p>
 
                     <div class="hero-actions">
@@ -93,107 +104,440 @@
             <section class="signature-section" id="menu">
                 <div class="section-heading">
                     <p class="eyebrow">The Royal Table</p>
-                    <h2>Our <span>Mandi</span> Menu</h2>
+                    <h2>Our Full <span>Menu</span></h2>
                 </div>
 
-                <div class="product-grid">
-                    <article class="product-card">
-                        <div class="product-image" style="background-image:url('./images/chicken-mandi.png');">
-                            <span class="product-tag">Bestseller</span>
-                        </div>
-                        <div class="product-body">
-                            <p class="product-meta">Classic Mandi</p>
-                            <h3>Chicken Mandi</h3>
-                            <p class="product-copy">The most common variety, featuring tender chicken cooked with mandi spices (Hawaij) and served over rice.</p>
-                            <div class="product-foot">
-                                <div class="price-block">
-                                    <span class="price">&#8377;299</span>
-                                </div>
-                                <button class="add-button" data-name="Chicken Mandi" data-price="299">Add +</button>
-                            </div>
-                        </div>
-                    </article>
+                <div class="menu-overview">
+                    <a href="#mandi-menu">6 Mandi Types</a>
+                    <a href="#biryani-menu">6 Biryani Types</a>
+                    <a href="#starters-menu">6 Starter Types</a>
+                    <a href="#desserts-menu">6 Dessert Types</a>
+                </div>
 
-                    <article class="product-card">
-                        <div class="product-image" style="background-image:url('./images/mutton-mandi .png');"></div>
-                        <div class="product-body">
-                            <p class="product-meta">Traditional Mandi</p>
-                            <h3>Mutton Mandi</h3>
-                            <p class="product-copy">Slow-cooked, succulent mutton (lamb) served over fragrant rice.</p>
-                            <div class="product-foot">
-                                <div class="price-block">
-                                    <span class="price">&#8377;449</span>
-                                </div>
-                                <button class="add-button" data-name="Mutton Mandi" data-price="449">Add +</button>
-                            </div>
-                        </div>
-                    </article>
+                <div class="menu-category" id="mandi-menu">
+                    <div class="menu-category-header">
+                        <p class="eyebrow">Mandi Collection</p>
+                        <h3>6 Types of <span>Mandi</span></h3>
+                    </div>
 
-                    <article class="product-card">
-                        <div class="product-image" style="background-image:url('./images/Fish-Mandi.png');">
-                            <span class="product-tag">Seafood</span>
-                        </div>
-                        <div class="product-body">
-                            <p class="product-meta">Coastal Favorite</p>
-                            <h3>Fish Mandi</h3>
-                            <p class="product-copy">A seafood alternative featuring seasoned fish grilled or fried and served with the traditional rice.</p>
-                            <div class="product-foot">
-                                <div class="price-block">
-                                    <span class="price">&#8377;399</span>
-                                </div>
-                                <button class="add-button" data-name="Fish Mandi" data-price="399">Add +</button>
+                    <div class="product-grid">
+                        <article class="product-card" id="chicken-mandi">
+                            <div class="product-image product-image-gold" style="background-image:url('./images/chicken-mandi.png');">
+                                <span class="product-tag">Classic</span>
                             </div>
-                        </div>
-                    </article>
+                            <div class="product-body">
+                                <p class="product-meta">Traditional Favorite</p>
+                                <h3>Chicken Mandi</h3>
+                                <p class="product-copy">The standard mandi with long-grain basmati rice and slow-cooked chicken seasoned with Yemeni Hawaij spices.</p>
+                                <div class="product-foot">
+                                    <div class="price-block">
+                                        <span class="price">&#8377;299</span>
+                                    </div>
+                                    <button class="add-button" data-name="Chicken Mandi" data-price="299">Add +</button>
+                                </div>
+                            </div>
+                        </article>
 
-                    <article class="product-card">
-                        <div class="product-image" style="background-image:url('./images/Madfoon.png');">
-                            <span class="product-tag">Slow Cooked</span>
-                        </div>
-                        <div class="product-body">
-                            <p class="product-meta">Coal Technique</p>
-                            <h3>Madfoon</h3>
-                            <p class="product-copy">A technique where the meat (usually mutton) is wrapped in foil or banana leaves and buried in hot coals to cook slowly.</p>
-                            <div class="product-foot">
-                                <div class="price-block">
-                                    <span class="price">&#8377;499</span>
-                                </div>
-                                <button class="add-button" data-name="Madfoon" data-price="499">Add +</button>
+                        <article class="product-card" id="mutton-mandi">
+                            <div class="product-image product-image-copper" style="background-image:url('./images/mutton-mandi .png');">
+                                <span class="product-tag">Rich Flavor</span>
                             </div>
-                        </div>
-                    </article>
+                            <div class="product-body">
+                                <p class="product-meta">Lamb Special</p>
+                                <h3>Mutton Mandi</h3>
+                                <p class="product-copy">Prepared with tender lamb for a deeper, richer flavor, served over fragrant mandi rice.</p>
+                                <div class="product-foot">
+                                    <div class="price-block">
+                                        <span class="price">&#8377;449</span>
+                                    </div>
+                                    <button class="add-button" data-name="Mutton Mandi" data-price="449">Add +</button>
+                                </div>
+                            </div>
+                        </article>
 
-                    <article class="product-card">
-                        <div class="product-image" style="background-image:url('./images/Madghoot.png');"></div>
-                        <div class="product-body">
-                            <p class="product-meta">Pressure Pot Method</p>
-                            <h3>Madghoot</h3>
-                            <p class="product-copy">A faster, high-pressure cooking method where the meat and rice are cooked together in a pressure pot, resulting in more tender meat.</p>
-                            <div class="product-foot">
-                                <div class="price-block">
-                                    <span class="price">&#8377;429</span>
-                                </div>
-                                <button class="add-button" data-name="Madghoot" data-price="429">Add +</button>
+                        <article class="product-card" id="al-faham-mandi">
+                            <div class="product-image product-image-smoke" style="background-image:url('./images/Al-Faham.png');">
+                                <span class="product-tag">Smoky Grill</span>
                             </div>
-                        </div>
-                    </article>
+                            <div class="product-body">
+                                <p class="product-meta">Charcoal Roast</p>
+                                <h3>Al Faham Mandi</h3>
+                                <p class="product-copy">Chicken marinated in Arabian spices and grilled over charcoal for a bold smoky taste with mandi rice.</p>
+                                <div class="product-foot">
+                                    <div class="price-block">
+                                        <span class="price">&#8377;349</span>
+                                    </div>
+                                    <button class="add-button" data-name="Al Faham Mandi" data-price="349">Add +</button>
+                                </div>
+                            </div>
+                        </article>
 
-                    <article class="product-card">
-                        <div class="product-image" style="background-image:url('./images/Al-Faham.png');">
-                            <span class="product-tag">Smoky Grill</span>
-                        </div>
-                        <div class="product-body">
-                            <p class="product-meta">Charcoal Special</p>
-                            <h3>Al Faham Mandi</h3>
-                            <p class="product-copy">Featuring charcoal-grilled chicken (Al Faham) marinated in spices, offering a smokier flavor than traditional Mandi.</p>
-                            <div class="product-foot">
-                                <div class="price-block">
-                                    <span class="price">&#8377;349</span>
-                                </div>
-                                <button class="add-button" data-name="Al Faham Mandi" data-price="349">Add +</button>
+                        <article class="product-card" id="juicy-chicken-mandi">
+                            <div class="product-image product-image-burgundy" style="background-image:url('./images/Madghoot.png');">
+                                <span class="product-tag">Extra Juicy</span>
                             </div>
-                        </div>
-                    </article>
+                            <div class="product-body">
+                                <p class="product-meta">Gravy Style</p>
+                                <h3>Juicy Chicken Mandi</h3>
+                                <p class="product-copy">Served with a rich, gravy-like sauce over the rice for extra moisture and fuller chicken flavor.</p>
+                                <div class="product-foot">
+                                    <div class="price-block">
+                                        <span class="price">&#8377;329</span>
+                                    </div>
+                                    <button class="add-button" data-name="Juicy Chicken Mandi" data-price="329">Add +</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card" id="turkish-mandi">
+                            <div class="product-image product-image-plum" style="background-image:url('./images/Madfoon.png');">
+                                <span class="product-tag">Dry Spice</span>
+                            </div>
+                            <div class="product-body">
+                                <p class="product-meta">Distinct Style</p>
+                                <h3>Turkish Mandi</h3>
+                                <p class="product-copy">A drier variant with a distinctive spice profile, usually served with a large piece of chicken or mutton.</p>
+                                <div class="product-foot">
+                                    <div class="price-block">
+                                        <span class="price">&#8377;379</span>
+                                    </div>
+                                    <button class="add-button" data-name="Turkish Mandi" data-price="379">Add +</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card" id="fish-prawns-mandi">
+                            <div class="product-image product-image-forest" style="background-image:url('./images/Fish-Mandi.png');">
+                                <span class="product-tag">Seafood</span>
+                            </div>
+                            <div class="product-body">
+                                <p class="product-meta">Coastal Choice</p>
+                                <h3>Fish or Prawns Mandi</h3>
+                                <p class="product-copy">Seafood mandi made with fried or grilled fish or prawns served on fragrant Yemeni-style rice.</p>
+                                <div class="product-foot">
+                                    <div class="price-block">
+                                        <span class="price">&#8377;399</span>
+                                    </div>
+                                    <button class="add-button" data-name="Fish or Prawns Mandi" data-price="399">Add +</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="menu-category" id="biryani-menu">
+                    <div class="menu-category-header">
+                        <p class="eyebrow">Biryani Collection</p>
+                        <h3>6 Types of <span>Biryani</span></h3>
+                    </div>
+
+                    <div class="product-grid">
+                        <article class="product-card" id="hyderabadi-biryani">
+                            <div class="product-image product-image-gold" style="background-image:url('./images/chicken-mandi.png');">
+                                <span class="product-tag">Spicy Favorite</span>
+                            </div>
+                            <div class="product-body">
+                                <p class="product-meta">Kacchi Style</p>
+                                <h3>Hyderabadi Biryani</h3>
+                                <p class="product-copy">Intensely spiced biryani made with raw marinated meat layered with basmati rice, saffron, and cardamom in dum style.</p>
+                                <div class="product-foot">
+                                    <div class="price-block">
+                                        <span class="price">&#8377;329</span>
+                                    </div>
+                                    <button class="add-button" data-name="Hyderabadi Biryani" data-price="329">Add +</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card" id="kolkata-biryani">
+                            <div class="product-image product-image-burgundy" style="background-image:url('./images/mutton-mandi .png');"></div>
+                            <div class="product-body">
+                                <p class="product-meta">Awadhi Influence</p>
+                                <h3>Kolkata Biryani</h3>
+                                <p class="product-copy">A mild, fragrant biryani with tender meat, iconic potatoes, and boiled eggs for a soft, royal finish.</p>
+                                <div class="product-foot">
+                                    <div class="price-block">
+                                        <span class="price">&#8377;309</span>
+                                    </div>
+                                    <button class="add-button" data-name="Kolkata Biryani" data-price="309">Add +</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card" id="lucknowi-biryani">
+                            <div class="product-image product-image-copper" style="background-image:url('./images/Madghoot.png');">
+                                <span class="product-tag">Aromatic</span>
+                            </div>
+                            <div class="product-body">
+                                <p class="product-meta">Pakki Style</p>
+                                <h3>Lucknowi Biryani</h3>
+                                <p class="product-copy">Meat and rice are cooked separately before layering, creating subtle aroma and beautifully balanced spices.</p>
+                                <div class="product-foot">
+                                    <div class="price-block">
+                                        <span class="price">&#8377;319</span>
+                                    </div>
+                                    <button class="add-button" data-name="Lucknowi Biryani" data-price="319">Add +</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card" id="sindhi-biryani">
+                            <div class="product-image product-image-plum" style="background-image:url('./images/Madfoon.png');"></div>
+                            <div class="product-body">
+                                <p class="product-meta">Tangy & Hot</p>
+                                <h3>Sindhi Biryani</h3>
+                                <p class="product-copy">A spicy, tangy biryani with yogurt, fried onions, potatoes, and aloo bukhara for a sour-spicy punch.</p>
+                                <div class="product-foot">
+                                    <div class="price-block">
+                                        <span class="price">&#8377;339</span>
+                                    </div>
+                                    <button class="add-button" data-name="Sindhi Biryani" data-price="339">Add +</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card" id="thalassery-biryani">
+                            <div class="product-image product-image-forest" style="background-image:url('./images/Fish-Mandi.png');">
+                                <span class="product-tag">Kerala Special</span>
+                            </div>
+                            <div class="product-body">
+                                <p class="product-meta">Malabar Style</p>
+                                <h3>Thalassery Biryani</h3>
+                                <p class="product-copy">Made with Kaima rice, cashews, raisins, and fragrant spices, often paired with chicken or seafood.</p>
+                                <div class="product-foot">
+                                    <div class="price-block">
+                                        <span class="price">&#8377;349</span>
+                                    </div>
+                                    <button class="add-button" data-name="Thalassery Biryani" data-price="349">Add +</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card" id="ambur-biryani">
+                            <div class="product-image product-image-smoke" style="background-image:url('./images/Al-Faham.png');"></div>
+                            <div class="product-body">
+                                <p class="product-meta">Tamil Nadu Classic</p>
+                                <h3>Ambur Biryani</h3>
+                                <p class="product-copy">Prepared with seeraga samba rice and a mint-coriander paste, usually served with rich brinjal curry.</p>
+                                <div class="product-foot">
+                                    <div class="price-block">
+                                        <span class="price">&#8377;299</span>
+                                    </div>
+                                    <button class="add-button" data-name="Ambur Biryani" data-price="299">Add +</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="menu-category" id="starters-menu">
+                    <div class="menu-category-header">
+                        <p class="eyebrow">Starter Collection</p>
+                        <h3>6 Types of <span>Starters</span></h3>
+                    </div>
+
+                    <div class="product-grid">
+                        <article class="product-card">
+                            <div class="product-image product-image-smoke" style="background-image:url('./images/Al-Faham.png');">
+                                <span class="product-tag">Smoky Grill</span>
+                            </div>
+                            <div class="product-body">
+                                <p class="product-meta">Tandoori & Kebabs</p>
+                                <h3>Paneer Tikka Platter</h3>
+                                <p class="product-copy">Grilled in tandoori spice with a smoky finish, inspired by paneer tikka, chicken tikka, and hara bhara kebab styles.</p>
+                                <div class="product-foot">
+                                    <div class="price-block">
+                                        <span class="price">&#8377;249</span>
+                                    </div>
+                                    <button class="add-button" data-name="Paneer Tikka Platter" data-price="249">Add +</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="product-image product-image-gold" style="background-image:url('./images/chicken-mandi.png');"></div>
+                            <div class="product-body">
+                                <p class="product-meta">Pakoras & Vadas</p>
+                                <h3>Onion Pakora Basket</h3>
+                                <p class="product-copy">A crispy fried starter range with onion pakora, potato wedges, and medu vada-inspired crunch.</p>
+                                <div class="product-foot">
+                                    <div class="price-block">
+                                        <span class="price">&#8377;179</span>
+                                    </div>
+                                    <button class="add-button" data-name="Onion Pakora Basket" data-price="179">Add +</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="product-image product-image-burgundy" style="background-image:url('./images/Madghoot.png');">
+                                <span class="product-tag">Fusion</span>
+                            </div>
+                            <div class="product-body">
+                                <p class="product-meta">Indo-Chinese</p>
+                                <h3>Chilli Paneer Bites</h3>
+                                <p class="product-copy">Wok-tossed, spicy starter inspired by gobi manchurian, chilli paneer, and chicken lollipop flavors.</p>
+                                <div class="product-foot">
+                                    <div class="price-block">
+                                        <span class="price">&#8377;229</span>
+                                    </div>
+                                    <button class="add-button" data-name="Chilli Paneer Bites" data-price="229">Add +</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="product-image product-image-copper" style="background-image:url('./images/mutton-mandi .png');"></div>
+                            <div class="product-body">
+                                <p class="product-meta">Street Food</p>
+                                <h3>Dahi Puri Chaat</h3>
+                                <p class="product-copy">Tangy, crunchy chaat with yogurt and chutneys, inspired by dahi puri, papdi chaat, and aloo tikki.</p>
+                                <div class="product-foot">
+                                    <div class="price-block">
+                                        <span class="price">&#8377;159</span>
+                                    </div>
+                                    <button class="add-button" data-name="Dahi Puri Chaat" data-price="159">Add +</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="product-image product-image-plum" style="background-image:url('./images/Madfoon.png');">
+                                <span class="product-tag">Stuffed</span>
+                            </div>
+                            <div class="product-body">
+                                <p class="product-meta">Pastries & Rolls</p>
+                                <h3>Veg Spring Roll Plate</h3>
+                                <p class="product-copy">Savory stuffed starters with the spirit of vegetable spring rolls, samosas, and cabbage ghugras.</p>
+                                <div class="product-foot">
+                                    <div class="price-block">
+                                        <span class="price">&#8377;189</span>
+                                    </div>
+                                    <button class="add-button" data-name="Veg Spring Roll Plate" data-price="189">Add +</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="product-image product-image-forest" style="background-image:url('./images/Fish-Mandi.png');"></div>
+                            <div class="product-body">
+                                <p class="product-meta">Dips & Spreads</p>
+                                <h3>Mezze Dip Board</h3>
+                                <p class="product-copy">A shareable board with hummus, bruschetta-style toast, and a cheesy dip for a lighter starter option.</p>
+                                <div class="product-foot">
+                                    <div class="price-block">
+                                        <span class="price">&#8377;199</span>
+                                    </div>
+                                    <button class="add-button" data-name="Mezze Dip Board" data-price="199">Add +</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="menu-category" id="desserts-menu">
+                    <div class="menu-category-header">
+                        <p class="eyebrow">Dessert Collection</p>
+                        <h3>6 Types of <span>Desserts</span></h3>
+                    </div>
+
+                    <div class="product-grid">
+                        <article class="product-card">
+                            <div class="product-image product-image-copper" style="background-image:url('./images/chicken-mandi.png');">
+                                <span class="product-tag">Fresh Finish</span>
+                            </div>
+                            <div class="product-body">
+                                <p class="product-meta">Fruit Desserts</p>
+                                <h3>Royal Fruit Bowl</h3>
+                                <p class="product-copy">A fruit-forward dessert inspired by baked pears, compotes, apple pie flavors, and chilled fruit salad freshness.</p>
+                                <div class="product-foot">
+                                    <div class="price-block">
+                                        <span class="price">&#8377;149</span>
+                                    </div>
+                                    <button class="add-button" data-name="Royal Fruit Bowl" data-price="149">Add +</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="product-image product-image-burgundy" style="background-image:url('./images/Madghoot.png');"></div>
+                            <div class="product-body">
+                                <p class="product-meta">Gelatin Desserts</p>
+                                <h3>Layered Jelly Cups</h3>
+                                <p class="product-copy">Colorful, jiggly gelatin cups inspired by jelly molds and layered gelatin desserts.</p>
+                                <div class="product-foot">
+                                    <div class="price-block">
+                                        <span class="price">&#8377;129</span>
+                                    </div>
+                                    <button class="add-button" data-name="Layered Jelly Cups" data-price="129">Add +</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="product-image product-image-gold" style="background-image:url('./images/mutton-mandi .png');">
+                                <span class="product-tag">Creamy</span>
+                            </div>
+                            <div class="product-body">
+                                <p class="product-meta">Milk & Custard</p>
+                                <h3>Saffron Custard</h3>
+                                <p class="product-copy">A silky dairy dessert inspired by puddings, panna cotta, custards, and creamy rice pudding.</p>
+                                <div class="product-foot">
+                                    <div class="price-block">
+                                        <span class="price">&#8377;169</span>
+                                    </div>
+                                    <button class="add-button" data-name="Saffron Custard" data-price="169">Add +</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="product-image product-image-plum" style="background-image:url('./images/Madfoon.png');"></div>
+                            <div class="product-body">
+                                <p class="product-meta">Cakes & Pastries</p>
+                                <h3>Chocolate Pastry Slice</h3>
+                                <p class="product-copy">A bakery-style dessert inspired by chocolate cake, cheesecake, croissants, and danishes.</p>
+                                <div class="product-foot">
+                                    <div class="price-block">
+                                        <span class="price">&#8377;189</span>
+                                    </div>
+                                    <button class="add-button" data-name="Chocolate Pastry Slice" data-price="189">Add +</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="product-image product-image-forest" style="background-image:url('./images/Al-Faham.png');">
+                                <span class="product-tag">Soft & Light</span>
+                            </div>
+                            <div class="product-body">
+                                <p class="product-meta">Whipped Cream</p>
+                                <h3>Vanilla Cream Parfait</h3>
+                                <p class="product-copy">Layered with whipped cream for a soft finish, drawing from mousse, syllabub, and parfait traditions.</p>
+                                <div class="product-foot">
+                                    <div class="price-block">
+                                        <span class="price">&#8377;179</span>
+                                    </div>
+                                    <button class="add-button" data-name="Vanilla Cream Parfait" data-price="179">Add +</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="product-image product-image-smoke" style="background-image:url('./images/Fish-Mandi.png');"></div>
+                            <div class="product-body">
+                                <p class="product-meta">Frozen Desserts</p>
+                                <h3>Gelato Delight</h3>
+                                <p class="product-copy">A cold dessert inspired by ice cream, sorbet, gelato, and frozen yogurt for a refreshing close.</p>
+                                <div class="product-foot">
+                                    <div class="price-block">
+                                        <span class="price">&#8377;159</span>
+                                    </div>
+                                    <button class="add-button" data-name="Gelato Delight" data-price="159">Add +</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </section>
 
