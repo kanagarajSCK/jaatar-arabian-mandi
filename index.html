@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaatar Arabian Mandi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="page-shell">
+        <header class="site-header">
+            <a href="#home" class="brand">
+                <span class="brand-main">Jaatar arabian mandi</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" id="siteNav">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#heritage">Our Heritage</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Cantact</a>
+            </nav>
+
+            <button class="cart-button" id="cartButton" aria-label="Open cart">
+                <span class="cart-icon">&#9673;</span>
+                <span>Cart</span>
+                <strong id="cartCount">0</strong>
+            </button>
+        </header>
+
+        <main>
+            <section class="hero" id="home">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1>JAATAR <span>Arabian Mandi</span></h1>
+                    <p class="hero-copy">Where ancient flames meet royal spice, the soul of Yemen in every grain.</p>
+
+                    <div class="hero-actions">
+                        <a href="#menu" class="btn btn-primary">Explore Menu</a>
+                        <a href="#heritage" class="btn btn-secondary">Our Story</a>
+                    </div>
+
+                    <a href="#features" class="scroll-link">Scroll</a>
+                </div>
+            </section>
+
+            <div class="dish-marquee">
+                <div class="dish-track">
+                    <span>Chicken Mandi</span>
+                    <span>Mutton Mandi</span>
+                    <span>Fish Mandi</span>
+                    <span>Madfoon</span>
+                    <span>Madghoot</span>
+                    <span>Al Faham Mandi</span>
+                    <span>Chicken Mandi</span>
+                    <span>Mutton Mandi</span>
+                    <span>Fish Mandi</span>
+                    <span>Madfoon</span>
+                    <span>Madghoot</span>
+                    <span>Al Faham Mandi</span>
+                </div>
+            </div>
+
+            <section class="features" id="features">
+                <article class="feature-card">
+                    <div class="feature-icon">&#128293;</div>
+                    <h3>Pit-Fired Tradition</h3>
+                    <p>Slow-cooked 12+ hours in underground tandoors, the way it is done in Hadhramaut.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">&#127807;</div>
+                    <h3>Royal Spice Blends</h3>
+                    <p>12 hand-ground Arabian spices, from cardamom and loomi to saffron and black lime.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">&#128081;</div>
+                    <h3>Since 2019</h3>
+                    <p>Trusted by over 40,000 families across Andhra Pradesh and Telangana for celebration feasts.</p>
+                </article>
+            </section>
+
+            <section class="signature-section" id="menu">
+                <div class="section-heading">
+                    <p class="eyebrow">The Royal Table</p>
+                    <h2>Our <span>Mandi</span> Menu</h2>
+                </div>
+
+                <div class="product-grid">
+                    <article class="product-card">
+                        <div class="product-image" style="background-image:url('./images/chicken-mandi.png');">
+                            <span class="product-tag">Bestseller</span>
+                        </div>
+                        <div class="product-body">
+                            <p class="product-meta">Classic Mandi</p>
+                            <h3>Chicken Mandi</h3>
+                            <p class="product-copy">The most common variety, featuring tender chicken cooked with mandi spices (Hawaij) and served over rice.</p>
+                            <div class="product-foot">
+                                <div class="price-block">
+                                    <span class="price">&#8377;299</span>
+                                </div>
+                                <button class="add-button" data-name="Chicken Mandi" data-price="299">Add +</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image" style="background-image:url('./images/mutton-mandi .png');"></div>
+                        <div class="product-body">
+                            <p class="product-meta">Traditional Mandi</p>
+                            <h3>Mutton Mandi</h3>
+                            <p class="product-copy">Slow-cooked, succulent mutton (lamb) served over fragrant rice.</p>
+                            <div class="product-foot">
+                                <div class="price-block">
+                                    <span class="price">&#8377;449</span>
+                                </div>
+                                <button class="add-button" data-name="Mutton Mandi" data-price="449">Add +</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image" style="background-image:url('./images/Fish-Mandi.png');">
+                            <span class="product-tag">Seafood</span>
+                        </div>
+                        <div class="product-body">
+                            <p class="product-meta">Coastal Favorite</p>
+                            <h3>Fish Mandi</h3>
+                            <p class="product-copy">A seafood alternative featuring seasoned fish grilled or fried and served with the traditional rice.</p>
+                            <div class="product-foot">
+                                <div class="price-block">
+                                    <span class="price">&#8377;399</span>
+                                </div>
+                                <button class="add-button" data-name="Fish Mandi" data-price="399">Add +</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image" style="background-image:url('./images/Madfoon.png');">
+                            <span class="product-tag">Slow Cooked</span>
+                        </div>
+                        <div class="product-body">
+                            <p class="product-meta">Coal Technique</p>
+                            <h3>Madfoon</h3>
+                            <p class="product-copy">A technique where the meat (usually mutton) is wrapped in foil or banana leaves and buried in hot coals to cook slowly.</p>
+                            <div class="product-foot">
+                                <div class="price-block">
+                                    <span class="price">&#8377;499</span>
+                                </div>
+                                <button class="add-button" data-name="Madfoon" data-price="499">Add +</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image" style="background-image:url('./images/Madghoot.png');"></div>
+                        <div class="product-body">
+                            <p class="product-meta">Pressure Pot Method</p>
+                            <h3>Madghoot</h3>
+                            <p class="product-copy">A faster, high-pressure cooking method where the meat and rice are cooked together in a pressure pot, resulting in more tender meat.</p>
+                            <div class="product-foot">
+                                <div class="price-block">
+                                    <span class="price">&#8377;429</span>
+                                </div>
+                                <button class="add-button" data-name="Madghoot" data-price="429">Add +</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image" style="background-image:url('./images/Al-Faham.png');">
+                            <span class="product-tag">Smoky Grill</span>
+                        </div>
+                        <div class="product-body">
+                            <p class="product-meta">Charcoal Special</p>
+                            <h3>Al Faham Mandi</h3>
+                            <p class="product-copy">Featuring charcoal-grilled chicken (Al Faham) marinated in spices, offering a smokier flavor than traditional Mandi.</p>
+                            <div class="product-foot">
+                                <div class="price-block">
+                                    <span class="price">&#8377;349</span>
+                                </div>
+                                <button class="add-button" data-name="Al Faham Mandi" data-price="349">Add +</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="highlight" id="heritage">
+                <div class="highlight-media" style="background-image:url('./images/Royal-Feast-Platter.png');"></div>
+                <div class="highlight-content">
+                    <p class="eyebrow">Signature Experience</p>
+                    <h2>The <span>Royal Feast</span> Platter</h2>
+                    <p>For celebrations worth remembering. Our Royal Feast Platter brings together whole lamb mandi, kabsa rice, mishkak skewers, harees, and a grand mezze spread served on a traditional copper siniya for 10 guests.</p>
+
+                    <div class="highlight-stats">
+                        <div>
+                            <strong>12H</strong>
+                            <span>Slow Cooked</span>
+                        </div>
+                        <div>
+                            <strong>10+</strong>
+                            <span>Guests Served</span>
+                        </div>
+                        <div>
+                            <strong>&#8377;5999</strong>
+                            <span>Starting Price</span>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="btn btn-primary">Reserve Your Feast</a>
+                </div>
+            </section>
+
+            <section class="reviews-section" id="reviews">
+                <div class="section-heading">
+                    <p class="eyebrow">Guest Journal</p>
+                    <h2>What Our <span>Guests</span> Say</h2>
+                </div>
+
+                <div class="reviews-grid">
+                    <article class="review-card">
+                        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        <p>Please order lamb mandi here. The meat is super tender and aromatic. Actual celebration food.</p>
+                        <strong>Venu Reddy</strong>
+                    </article>
+                    <article class="review-card">
+                        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        <p>Feels like a royal feast every time. Huge portions, rich flavor, and very good service.</p>
+                        <strong>Sana Khan</strong>
+                    </article>
+                    <article class="review-card">
+                        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        <p>One of the best Arabian mandi spots in the city. Perfect for family weekends and events.</p>
+                        <strong>Arjun Nair</strong>
+                    </article>
+                </div>
+            </section>
+
+            <section class="cta-section" id="contact">
+                <div class="cta-overlay"></div>
+                <div class="cta-content">
+                    <h2>Celebrate With <span>Jaatar</span> This Weekend</h2>
+                    <p>Eid, weddings, and corporate gatherings. We bring the royal feast to your table.</p>
+                    <div class="hero-actions">
+                        <a href="tel:+919999999999" class="btn btn-primary">Call To Order</a>
+                        <a href="#menu" class="btn btn-secondary">View Full Menu</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div>
+                <a href="#home" class="brand footer-brand">
+                    <span class="brand-main">Jaatar arabian mandi</span>
+                </a>
+                <p>Authentic Arabian mandi rooted in Yemeni tradition, made with love in the heart of Andhra Pradesh.</p>
+            </div>
+
+            <div>
+                <h3>Menu</h3>
+                <a href="#menu">Chicken Mandi</a>
+                <a href="#menu">Mutton Mandi</a>
+                <a href="#menu">Fish Mandi</a>
+                <a href="#menu">Al Faham Mandi</a>
+            </div>
+
+            <div>
+                <h3>Company</h3>
+                <a href="#heritage">Our Story</a>
+                <a href="#features">Kitchen Tour</a>
+                <a href="#contact">Catering</a>
+                <a href="#contact">Franchise</a>
+            </div>
+
+            <div>
+                <h3>Royal Newsletter</h3>
+                <p>New dishes, secret recipes, and exclusive offers for our royal guests.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" aria-label="Email address">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </footer>
+    </div>
+
+    <div class="cart-drawer" id="cartDrawer" aria-hidden="true">
+        <div class="cart-header">
+            <h2>Your Royal Order</h2>
+            <button id="closeCart" aria-label="Close cart">&#10005;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty. Add some royal dishes.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <strong id="cartTotal">&#8377;0</strong>
+            </div>
+            <button class="btn btn-primary cart-checkout">Proceed To Checkout</button>
+        </div>
+    </div>
+
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
