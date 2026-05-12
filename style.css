@@ -83,6 +83,13 @@ input {
     letter-spacing: 0.08em;
 }
 
+.brand-logo {
+    display: block;
+    width: auto;
+    height: 4rem;
+    object-fit: contain;
+}
+
 .brand-main {
     font-size: 2rem;
 }
@@ -943,6 +950,10 @@ body.drawer-open {
         word-break: break-word;
     }
 
+    .brand-logo {
+        height: 3.2rem;
+    }
+
     .site-nav {
         display: none;
         position: absolute;
@@ -1149,6 +1160,10 @@ body.drawer-open {
 
     .brand-main {
         font-size: 1rem;
+    }
+
+    .brand-logo {
+        height: 2.8rem;
     }
 
     .site-nav {
