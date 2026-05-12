@@ -319,7 +319,7 @@ input {
 
 .hero h1 {
     font-size: clamp(3.8rem, 10vw, 7.4rem);
-    color: #f6e7b5;
+    color: #ffffff;
     font-family: "Playfair Display SC", serif;
     font-weight: 700;
     letter-spacing: 0.12em;
@@ -331,7 +331,7 @@ input {
 .section-heading span,
 .highlight-content span,
 .cta-content span {
-    color: #f6e7b5;
+    color: #ffffff;
 }
 
 .hero-copy,
