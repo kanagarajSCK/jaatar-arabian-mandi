@@ -271,7 +271,7 @@ input {
             rgba(20, 6, 10, 0.15),
             rgba(20, 6, 10, 0.25)
         ),
-        url("./images/image.png");
+        url("./images/home.png");
 
     background-position: center;
     background-repeat: no-repeat;
@@ -486,8 +486,8 @@ input {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.35rem;
 }
 
 .menu-overview {
@@ -535,12 +535,17 @@ input {
     box-shadow: var(--shadow);
 }
 
+.product-card {
+    max-width: 18rem;
+    margin: 0 auto;
+}
+
 .product-image {
     position: relative;
-    min-height: 20rem;
+    min-height: 13rem;
     aspect-ratio: 4 / 3;
     background-position: center;
-    background-size: contain;
+    background-size: 88%;
     background-repeat: no-repeat;
     background-color: rgba(20, 6, 10, 0.92);
 }
@@ -593,7 +598,7 @@ input {
 }
 
 .product-body {
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 .product-meta {
@@ -606,14 +611,14 @@ input {
 }
 
 .product-card h3 {
-    margin-top: 0.8rem;
+    margin-top: 0.65rem;
     color: var(--cream);
-    font-size: 2rem;
+    font-size: 1.45rem;
 }
 
 .product-copy {
-    margin: 0.6rem 0 1.4rem;
-    font-size: 1.15rem;
+    margin: 0.5rem 0 1rem;
+    font-size: 1rem;
 }
 
 .product-foot,
@@ -638,12 +643,13 @@ input {
 
 .price {
     color: var(--gold);
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .add-button {
     min-height: auto;
-    padding: 0.8rem 1.35rem;
+    padding: 0.65rem 1rem;
+    font-size: 0.85rem;
 }
 
 .highlight {
@@ -887,6 +893,10 @@ body.drawer-open {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
     .highlight,
     .features {
         grid-template-columns: 1fr;
@@ -902,7 +912,7 @@ body.drawer-open {
     }
 
     .product-image {
-        min-height: 18rem;
+        min-height: 12rem;
     }
 }
 
@@ -1156,7 +1166,7 @@ body.drawer-open {
     }
 
     .product-image {
-        min-height: 15rem;
+        min-height: 11rem;
     }
 
     .product-foot {
